@@ -1,0 +1,93 @@
+.players-list {
+    width: 100%;
+    margin: 5rem 0;
+}
+
+.players-list__header, .player {
+    width: 100%;
+    height: 5rem;
+
+    margin: 0 0 .5rem;
+    padding: 0 1rem;
+
+    display: flex;
+    justify-content: space-between;
+
+    background-color: var(--white);
+    border-radius: .5rem;
+
+    & div {
+        height: inherit;
+
+        display: flex;
+        align-items: center;
+    }
+}
+
+.players-list__header {
+    user-select: none;
+}
+
+.player {
+    &.red {
+        background-color: var(--red);
+    }
+
+    &.black {
+        background-color: var(--gray);
+    }
+
+    &.dead {
+        pointer-events: none;
+        background-color: transparent;
+        filter: blur(.1rem);
+    }
+} 
+
+.player-number, .player-foll, .player-kill {
+    width: 5rem;
+}
+
+.night {
+    min-width: 6rem;
+    width: auto;
+    padding: 0.2rem 0;
+}
+
+.night, .player-kill {
+    justify-content: center;
+}
+
+.player-kill {
+    cursor: pointer;
+
+    &.x {
+        font-size: 3rem;
+        user-select: none;
+    }
+}
+
+.player-id {
+    width: 20rem;
+
+    & input {
+        width: 100%;
+        height: 100%;
+
+        border: none;
+        outline: none;
+        background-color: transparent;
+    }
+}
+
+.player-role {
+    width: 20rem;
+}
+
+.player-foll {
+    width: 5rem;
+    justify-content: center;
+
+    cursor: pointer;
+    user-select: none;
+}
